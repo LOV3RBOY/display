@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVE NOTE - A visual display of beautiful moments .</title>
+    <meta name="description"
+        content="In 2015, my wife Sarah and I embarked on a road trip across the western U.S., capturing 100 Instax frames of love, discovery, and resilience. These moments remain a testament to the bond we built on the open road." />
+
+    <!-- Removed favicon references -->
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <nav class="navbar heading-padding">
+        <button class="title custom-font" id="navbar-title" type="button">LOVE NOTE</button>
+        <div class="navbar-links">
+            <button class="button" type="button" id="full-story-btn">About</button>
+            <!-- Instagram link removed -->
+        </div>
+    </nav>
+    <h1 class="love-note-title custom-font">
+        LOVE NOTE
+        <div id="scroll-text-container" class="wide-kerning">
+            <p class="scroll-text">Scroll to Explore</p>
+        </div>
+    </h1>
+    <div class="slide-1 slightly-less-wide-kerning">
+        <p>
+            This isn't just a collection of videos. It's a visual anthology of passion, connection, and moments that
+            mattered.
+            A showcase of memories—raw, unfiltered, and real. Each video is a love note, a frame frozen in time,
+            capturing the electricity of intimacy and the beauty of shared experiences.
+        </p>
+        <p>
+            This isn't about shock value or reckless exposure; it's about storytelling. The kind of storytelling that
+            doesn't sanitize, doesn't filter, doesn't ask for permission. It's about honesty—the kind that makes people
+            feel something. Love, lust, nostalgia, curiosity. Every frame is a moment that once burned bright, a chapter
+            of a past connection, immortalized not as something to be hidden, but as something to be acknowledged.
+        </p>
+    </div>
+    <div class="modal-overlay">
+        <div class="modal-header heading-padding">
+            <div class="title custom-font" id="modal-title">LOVE NOTE</div>
+            <button class="close button white-button" id="close-modal-button" type="button">BACK</button>
+        </div>
+        <div class="history-section">
+            <div class="flavor-text slow-fade-in">A visual display of beautiful moments.</div>
+            <div class="history-content slightly-less-less-wide-kerning">
+                <p class="slow-fade-in">
+                    This isn't just a collection of videos. It's a visual anthology of passion, connection, and moments
+                    that mattered. A showcase of memories—raw, unfiltered, and real. Each video is a love note, a frame
+                    frozen in time, capturing the electricity of intimacy and the beauty of shared experiences.
+                </p>
+                <p class="slow-fade-in">
+                    This isn't about shock value or reckless exposure; it's about storytelling. The kind of storytelling
+                    that doesn't sanitize, doesn't filter, doesn't ask for permission. It's about honesty—the kind that
+                    makes people feel something. Love, lust, nostalgia, curiosity. Every frame is a moment that once
+                    burned bright, a chapter of a past connection, immortalized not as something to be hidden, but as
+                    something to be acknowledged.
+                </p>
+                <p class="slow-fade-in">
+                    There's no shame in desire. No disgrace in intimacy. This is about the art of human connection—the
+                    way two bodies move in sync, the way eyes lock, the way a touch lingers. It's not just about sex.
+                    It's about chemistry. It's about energy. It's about the kind of moments that, even when they pass,
+                    still leave an imprint.
+                </p>
+                <p class="slow-fade-in">
+                    This is passion, unedited. Memories, unapologetic. And a showcase that stands as a testament to the
+                    beauty of embracing it all.
+                </p>
+            </div>
+        </div>
+        <div class="cta-section">
+            <div class="cta-text slow-fade-in">Explore the Experience</div>
+            <!-- Using existing images instead of placeholders -->
+            <img class="cta-image cta-image-3" src="assets/images/205653CE-D6DA-46F7-A61F-84A671709C73.JPG"
+                alt="Image 3">
+            <img class="cta-image cta-image-2" src="assets/images/45211a07-2b0e-4c37-89c1-a36e43f6cc49.JPG"
+                alt="Image 2">
+            <img class="cta-image cta-image-1" src="assets/images/34179ea7-04df-495a-990d-add0de697f5c.JPG"
+                alt="Image 1">
+        </div>
+    </div>
+    <!-- Updated canvas: removed negative animation delay and blur -->
+    <canvas id="threejs-canvas" data-engine="three.js r160" width="491" height="615"
+        style="z-index: 0; width: 491px; height: 615px; opacity: 1; filter: none;"></canvas>
+    <!-- Updated controls overlay with nested controls-content and SVG arrows -->
+    <div id="controls-overlay" class="heading-padding" style="opacity: 1;">
+        <button class="button" id="controls-toggle" type="button">controls</button>
+        <div class="controls-content">
+            <div class="control-item">
+                <span class="action-text">mouse</span>
+                <span class="description-text">drag &amp; scroll</span>
+            </div>
+            <div class="control-item">
+                <span class="action-text">click on image</span>
+                <span class="description-text">zoom to image</span>
+            </div>
+            <div class="control-item">
+                <span class="action-text">keyboard</span>
+                <span class="description-text">
+                    previous
+                    <!-- Left arrow -->
+                    <svg width="6" height="9" style="margin-left: 9px; margin-right: 10px" viewBox="0 0 6 9" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.24841 1.54161L2.34069 4.44933L5.24841 7.35705C5.31779 7.42643 5.37283 7.5088 5.41038 7.59946C5.44793 7.69011 5.46725 7.78727 5.46725 7.88539C5.46725 7.98351 5.44793 8.08067 5.41038 8.17132C5.37283 8.26197 5.31779 8.34434 5.24841 8.41372C5.17903 8.48311 5.09666 8.53814 5.00601 8.57569C4.91536 8.61324 4.8182 8.63257 4.72007 8.63257C4.62195 8.63257 4.52479 8.61324 4.43414 8.57569C4.34349 8.53814 4.26112 8.48311 4.19174 8.41372L0.751936 4.97392C0.459665 4.68165 0.459665 4.20952 0.751936 3.91725L4.19174 0.477446C4.26107 0.407973 4.34342 0.352856 4.43408 0.315249C4.52474 0.277643 4.62193 0.258285 4.72008 0.258285C4.81822 0.258285 4.91541 0.277643 5.00607 0.315249C5.09673 0.352856 5.17908 0.407973 5.24841 0.477447C5.53319 0.769718 5.54068 1.24934 5.24841 1.54161Z"
+                            fill="white"></path>
+                    </svg>
+                </span>
+                <span class="description-text">
+                    <!-- Right arrow -->
+                    <svg width="6" height="9" style="margin-right: 9px" viewBox="0 0 6 9" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.751589 7.34901L3.65931 4.44129L0.751589 1.53357C0.682207 1.46419 0.627171 1.38182 0.589622 1.29117C0.552072 1.20052 0.532745 1.10336 0.532745 1.00524C0.532745 0.907115 0.552072 0.809955 0.589622 0.719303C0.627171 0.628651 0.682207 0.546283 0.751589 0.476901C0.820971 0.407519 0.90334 0.352482 0.993992 0.314932C1.08464 0.277383 1.1818 0.258057 1.27993 0.258057C1.37805 0.258057 1.47521 0.277383 1.56586 0.314932C1.65651 0.352482 1.73888 0.407519 1.80826 0.476901L5.24806 3.9167C5.54034 4.20897 5.54034 4.6811 5.24806 4.97338L1.80826 8.41318C1.73893 8.48265 1.65658 8.53777 1.56592 8.57538C1.47526 8.61298 1.37807 8.63234 1.27993 8.63234C1.18178 8.63234 1.08459 8.61298 0.993931 8.57538C0.903272 8.53777 0.82092 8.48265 0.751589 8.41318C0.466813 8.12091 0.459319 7.64128 0.751589 7.34901Z"
+                            fill="white"></path>
+                    </svg>
+                    next
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.1/three.min.js"></script>
+    <script src="assets/scripts.js"></script>
+    <!-- Music player -->
+    <audio id="background-music" loop>
+        <source src="assets/sounds/01 bg-music-Something in the Orange.mp3" type="audio/mpeg">
+    </audio>
+    <div id="music-controls" class="heading-padding">
+        <span id="music-credits">Zach Bryan - Something in the Orange</span>
+        <button id="music-toggle" class="button">
+            <img id="music-icon" src="assets/images/speaker.svg" alt="Music control" width="24px" height="24px">
+        </button>
+    </div>
+</body>
+
+</html>
